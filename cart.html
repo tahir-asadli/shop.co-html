@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Promo Banner -->
+  <div class="w-full bg-black text-white">
+    <div class="container flex items-center justify-center px-4 py-2 relative text-sm">
+      <span> Sign up and get 20% off to your first order. <a href="#" class="underline hover:text-gray-300 ml-1 font-bold">Sign Up Now</a>
+      </span>
+      <button aria-label="Close banner" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-400 text-lg"> &times; </button>
+    </div>
+  </div>
+  <!-- Navigation Bar -->
+  <nav class="w-full">
+    <div class="container flex items-center justify-between py-6">
+      <!-- Logo -->
+      <div class="flex items-center gap-8">
+        <a href="/"><img src="/images/logo.png" alt="logo"></a>
+        <ul class="hidden md:flex items-center gap-6 text-base font-medium text-black">
+          <li class="flex items-center gap-1 cursor-pointer select-none"> Shop <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </li>
+          <li class="cursor-pointer select-none">On Sale</li>
+          <li class="cursor-pointer select-none">New Arrivals</li>
+          <li class="cursor-pointer select-none">Brands</li>
+        </ul>
+      </div>
+      <!-- Search Bar -->
+      <div class="flex-1 flex justify-center px-8">
+        <div class="w-full max-w-xl flex items-center relative">
+          <svg class="size-6 text-gray-400 ml-4 absolute" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.9399 18.348L15.4877 13.8939C16.8226 12.1544 17.4458 9.97216 17.2309 7.78998C17.0161 5.60781 15.9792 3.58907 14.3306 2.14328C12.6821 0.697486 10.5453 -0.0670986 8.35376 0.00462578C6.16221 0.0763502 4.07999 0.979013 2.5295 2.5295C0.979013 4.07999 0.0763502 6.16221 0.00462578 8.35376C-0.0670986 10.5453 0.697486 12.6821 2.14328 14.3306C3.58907 15.9792 5.60781 17.0161 7.78998 17.2309C9.97216 17.4458 12.1544 16.8226 13.8939 15.4877L18.3499 19.9445C18.4545 20.0492 18.5787 20.1322 18.7155 20.1888C18.8522 20.2455 18.9987 20.2746 19.1467 20.2746C19.2947 20.2746 19.4413 20.2455 19.578 20.1888C19.7147 20.1322 19.839 20.0492 19.9436 19.9445C20.0482 19.8399 20.1313 19.7157 20.1879 19.5789C20.2445 19.4422 20.2737 19.2957 20.2737 19.1477C20.2737 18.9997 20.2445 18.8531 20.1879 18.7164C20.1313 18.5797 20.0482 18.4554 19.9436 18.3508L19.9399 18.348ZM2.26891 8.64392C2.26891 7.38306 2.6428 6.15052 3.3433 5.10215C4.04379 4.05379 5.03943 3.23669 6.20431 2.75418C7.36919 2.27167 8.65099 2.14543 9.88762 2.39141C11.1242 2.63739 12.2602 3.24455 13.1517 4.13611C14.0433 5.02767 14.6504 6.16359 14.8964 7.40021C15.1424 8.63684 15.0162 9.91864 14.5336 11.0835C14.0511 12.2484 13.234 13.244 12.1857 13.9445C11.1373 14.645 9.90477 15.0189 8.64392 15.0189C6.95369 15.0172 5.3332 14.345 4.13803 13.1498C2.94286 11.9546 2.27065 10.3341 2.26891 8.64392Z" fill="currentColor" />
+          </svg>
+          <input type="text" placeholder="Search for products..." class="bg-gray-100 outline-none h-12 flex-1 text-base placeholder-gray-400 rounded-full px-4 py-2 pl-14" />
+        </div>
+      </div>
+      <!-- Icons -->
+      <div class="flex items-center gap-6 text-2xl text-black">
+        <!-- Cart Icon -->
+        <a href="/cart.html" aria-label="Cart" class="hover:text-gray-500">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m10 0h2m-2 0a2 2 0 100 4 2 2 0 000-4zm0 0a2 2 0 100-4 2 2 0 000 4z" />
+          </svg>
+        </a>
+        <!-- Account Icon -->
+        <button aria-label="Account" class="hover:text-gray-500">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 3a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Cart Section -->
+  <main class="container py-12">
+    <h1 class="text-5xl font-bold text-black mb-8 font-integral-cf">Your cart</h1>
+    <div class="grid grid-cols-3 gap-8">
+      <!-- Cart Items Column -->
+      <div class="col-span-2 space-y-6">
+        <!-- Cart Item 1: Gradient Graphic T-shirt -->
+        <div class="flex gap-4 pb-6 border-b border-gray-200">
+          <div class="bg-gray-100 rounded-lg overflow-hidden w-28 h-28 flex-shrink-0">
+            <img alt="Gradient Graphic T-shirt" class="w-full h-full object-cover" src="https://www.figma.com/api/mcp/asset/f29f7094-95d7-40fe-ba01-dbfe1382a05e" />
+          </div>
+          <div class="flex-1 flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-black text-lg mb-1">Gradient Graphic T-shirt</h3>
+              <p class="text-sm text-gray-600 mb-1"><span class="text-gray-600">Size: </span><span class="text-gray-600">Large</span></p>
+              <p class="text-sm text-gray-600 mb-4"><span class="text-gray-600">Color: </span><span class="text-gray-600">White</span></p>
+              <p class="text-xl font-bold text-black">$145</p>
+            </div>
+            <div class="flex flex-col items-end gap-4">
+              <button class="text-red-500 hover:text-red-700 text-2xl w-6 h-6 flex items-center justify-center bg-red-500 text-white rounded px-1">🗑</button>
+              <div class="flex items-center gap-5 bg-gray-100 rounded-full px-5 py-3">
+                <button class="text-gray-600 hover:text-black text-lg">−</button>
+                <span class="text-sm font-medium font-satoshi">1</span>
+                <button class="text-gray-600 hover:text-black text-lg">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cart Item 2: Checkered Shirt -->
+        <div class="flex gap-4 pb-6 border-b border-gray-200">
+          <div class="bg-gray-100 rounded-lg overflow-hidden w-28 h-28 flex-shrink-0">
+            <img alt="Checkered Shirt" class="w-full h-full object-cover" src="https://www.figma.com/api/mcp/asset/298e83fc-770b-45e2-851e-882e374ee44c" />
+          </div>
+          <div class="flex-1 flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-black text-lg mb-1">Checkered Shirt</h3>
+              <p class="text-sm text-gray-600 mb-1"><span class="text-gray-600">Size: </span><span class="text-gray-600">Medium</span></p>
+              <p class="text-sm text-gray-600 mb-4"><span class="text-gray-600">Color: </span><span class="text-gray-600">Red</span></p>
+              <p class="text-xl font-bold text-black">$180</p>
+            </div>
+            <div class="flex flex-col items-end gap-4">
+              <button class="text-red-500 hover:text-red-700 text-2xl w-6 h-6 flex items-center justify-center bg-red-500 text-white rounded px-1">🗑</button>
+              <div class="flex items-center gap-5 bg-gray-100 rounded-full px-5 py-3">
+                <button class="text-gray-600 hover:text-black text-lg">−</button>
+                <span class="text-sm font-medium font-satoshi">1</span>
+                <button class="text-gray-600 hover:text-black text-lg">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cart Item 3: Skinny Fit Jeans -->
+        <div class="flex gap-4">
+          <div class="bg-gray-100 rounded-lg overflow-hidden w-28 h-28 flex-shrink-0">
+            <img alt="Skinny Fit Jeans" class="w-full h-full object-cover" src="https://www.figma.com/api/mcp/asset/12282cba-bdae-4c64-a57d-98c448a7590f" />
+          </div>
+          <div class="flex-1 flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-black text-lg mb-1">Skinny Fit Jeans</h3>
+              <p class="text-sm text-gray-600 mb-1"><span class="text-gray-600">Size: </span><span class="text-gray-600">Large</span></p>
+              <p class="text-sm text-gray-600 mb-4"><span class="text-gray-600">Color: </span><span class="text-gray-600">Blue</span></p>
+              <p class="text-xl font-bold text-black">$240</p>
+            </div>
+            <div class="flex flex-col items-end gap-4">
+              <button class="text-red-500 hover:text-red-700 text-2xl w-6 h-6 flex items-center justify-center bg-red-500 text-white rounded px-1">🗑</button>
+              <div class="flex items-center gap-5 bg-gray-100 rounded-full px-5 py-3">
+                <button class="text-gray-600 hover:text-black text-lg">−</button>
+                <span class="text-sm font-medium font-satoshi">1</span>
+                <button class="text-gray-600 hover:text-black text-lg">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Order Summary Column -->
+      <div class="border border-gray-200 rounded-2xl p-6 h-fit sticky top-20">
+        <h2 class="text-2xl font-bold text-black mb-6">Order Summary</h2>
+        <div class="space-y-4 mb-6">
+          <div class="flex justify-between">
+            <span class="text-gray-600">Subtotal</span>
+            <span class="font-bold text-black">$565</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Discount (-20%)</span>
+            <span class="font-bold text-red-500">-$113</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-600">Delivery Fee</span>
+            <span class="font-bold text-black">$15</span>
+          </div>
+          <div class="border-t border-gray-200 pt-4 flex justify-between">
+            <span class="text-black">Total</span>
+            <span class="text-2xl font-bold text-black">$467</span>
+          </div>
+        </div>
+        <div class="flex gap-3 mb-6">
+          <div class="flex-1 bg-gray-100 rounded-full px-4 py-3 flex items-center gap-2">
+            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+            </svg>
+            <input type="text" placeholder="Add promo code" class="bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400 flex-1 font-satoshi" />
+          </div>
+          <button class="bg-black text-white rounded-full px-6 py-3 font-semibold hover:bg-gray-900 font-satoshi">Apply</button>
+        </div>
+        <button class="w-full bg-black text-white rounded-full py-4 font-semibold text-base hover:bg-gray-900 flex items-center justify-center gap-3 font-satoshi"> Go to Checkout <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="mt-20 border-t border-gray-100">
+    <div class="container py-12">
+      <div class="grid grid-cols-5 gap-8 mb-8">
+        <div>
+          <h3 class="font-bold text-black mb-4">Company</h3>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li><a href="#" class="hover:text-black">About</a></li>
+            <li><a href="#" class="hover:text-black">Features</a></li>
+            <li><a href="#" class="hover:text-black">Works</a></li>
+            <li><a href="#" class="hover:text-black">Career</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-black mb-4">Help</h3>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li><a href="#" class="hover:text-black">Customer Support</a></li>
+            <li><a href="#" class="hover:text-black">Delivery Details</a></li>
+            <li><a href="#" class="hover:text-black">FAQ</a></li>
+            <li><a href="#" class="hover:text-black">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-black mb-4">Resources</h3>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li><a href="#" class="hover:text-black">Free eBooks</a></li>
+            <li><a href="#" class="hover:text-black">Development Tutorial</a></li>
+            <li><a href="#" class="hover:text-black">How to - Blog</a></li>
+            <li><a href="#" class="hover:text-black">Youtube Playlist</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-black mb-4">Follow Us</h3>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li><a href="#" class="hover:text-black">Twitter</a></li>
+            <li><a href="#" class="hover:text-black">Facebook</a></li>
+            <li><a href="#" class="hover:text-black">Instagram</a></li>
+            <li><a href="#" class="hover:text-black">Linkedin</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-black mb-4">Contact</h3>
+          <p class="text-sm text-gray-600 mb-4">Email: support@example.com</p>
+          <p class="text-sm text-gray-600">Phone: +1 234 567 8900</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-100 pt-6 flex justify-between items-center">
+        <p class="text-sm text-gray-600">&copy; 2024 E-Commerce Store. All rights reserved.</p>
+        <div class="flex gap-4">
+          <span class="text-sm text-gray-600">Follow Us:</span>
+          <a href="#" class="text-gray-600 hover:text-black">Twitter</a>
+          <a href="#" class="text-gray-600 hover:text-black">Facebook</a>
+          <a href="#" class="text-gray-600 hover:text-black">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
