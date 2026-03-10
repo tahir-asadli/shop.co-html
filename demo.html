@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Panel Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white p-8">
+  <div class="border border-[rgba(0,0,0,0.1)] border-solid flex flex-col gap-6 items-start overflow-clip px-6 py-5 rounded-5xl w-80" data-node-id="29:1218">
+    <!-- Filters Header -->
+    <div class="flex items-center justify-between w-full" data-node-id="29:1241">
+      <div class="flex flex-col justify-center font-bold text-xl text-black" data-node-id="29:1237">
+        <p>Filters</p>
+      </div>
+      <div class="flex-shrink-0 w-6 h-6" data-name="Frame" data-node-id="29:1239">
+        <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="w-full h-px bg-gray-200" data-node-id="29:1238"></div>
+    <!-- Clothing Types Section -->
+    <div class="flex flex-col gap-5 w-full" data-node-id="29:1308">
+      <div class="flex items-center justify-between w-full" data-node-id="29:1291">
+        <p class="text-base text-gray-600">T-shirts</p>
+        <div class="flex-shrink-0 w-4 h-4 -rotate-90" data-node-id="29:1289">
+          <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="flex items-center justify-between w-full" data-node-id="29:1292">
+        <p class="text-base text-gray-600">Shorts</p>
+        <div class="flex-shrink-0 w-4 h-4 -rotate-90" data-node-id="29:1294">
+          <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="flex items-center justify-between w-full" data-node-id="29:1296">
+        <p class="text-base text-gray-600">Shirts</p>
+        <div class="flex-shrink-0 w-4 h-4 -rotate-90" data-node-id="29:1298">
+          <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="flex items-center justify-between w-full" data-node-id="29:1300">
+        <p class="text-base text-gray-600">Hoodie</p>
+        <div class="flex-shrink-0 w-4 h-4 -rotate-90" data-node-id="29:1302">
+          <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="flex items-center justify-between w-full" data-node-id="29:1304">
+        <p class="text-base text-gray-600">Jeans</p>
+        <div class="flex-shrink-0 w-4 h-4 -rotate-90" data-node-id="29:1306">
+          <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="w-full h-px bg-gray-200" data-node-id="29:1309"></div>
+    <!-- Price Section -->
+    <div class="flex flex-col gap-5 w-full" data-node-id="29:1332">
+      <div class="flex items-center justify-between w-full" data-node-id="29:1310">
+        <div class="flex flex-col justify-center font-bold text-xl text-black" data-node-id="29:1311">
+          <p>Price</p>
+        </div>
+        <div class="flex items-center justify-center rotate-180" data-node-id="29:1314">
+          <div class="flex-shrink-0 w-4 h-4" data-name="Frame" data-node-id="29:1315">
+            <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Price Range Display -->
+      <div class="flex flex-col gap-6 w-full" data-node-id="29:1324">
+        <div class="flex items-center justify-between w-full">
+          <p class="font-medium text-sm text-black">$50</p>
+          <p class="font-medium text-sm text-black text-center">$200</p>
+        </div>
+        <!-- Range Slider -->
+        <div class="w-full">
+          <input type="range" min="0" max="500" value="50" class="w-full h-1 bg-gray-300 rounded-lg appearance-none cursor-pointer">
+        </div>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="w-full h-px bg-gray-200" data-node-id="29:1333"></div>
+    <!-- Colors Section -->
+    <div class="flex flex-col gap-5 w-full" data-node-id="29:1351">
+      <div class="flex items-center justify-between w-full" data-node-id="29:1334">
+        <div class="flex flex-col justify-center font-bold text-xl text-black" data-node-id="29:1335">
+          <p>Colors</p>
+        </div>
+        <div class="flex items-center justify-center rotate-180" data-node-id="29:1338">
+          <div class="flex-shrink-0 w-4 h-4" data-name="Frame" data-node-id="29:1338">
+            <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Color Palette -->
+      <div class="flex flex-col gap-4 w-full" data-node-id="29:7639">
+        <div class="flex flex-wrap gap-3">
+          <div class="w-8 h-8 rounded-full bg-red-500 cursor-pointer border-2 border-transparent hover:border-black"></div>
+          <div class="w-8 h-8 rounded-full bg-blue-600 cursor-pointer border-2 border-transparent hover:border-black"></div>
+          <div class="w-8 h-8 rounded-full bg-green-500 cursor-pointer border-2 border-transparent hover:border-black"></div>
+          <div class="w-8 h-8 rounded-full bg-yellow-400 cursor-pointer border-2 border-transparent hover:border-black"></div>
+          <div class="w-8 h-8 rounded-full bg-purple-600 cursor-pointer border-2 border-transparent hover:border-black"></div>
+          <div class="w-8 h-8 rounded-full bg-pink-500 cursor-pointer border-2 border-transparent hover:border-black"></div>
+          <div class="w-8 h-8 rounded-full bg-orange-500 cursor-pointer border-2 border-transparent hover:border-black"></div>
+          <div class="w-8 h-8 rounded-full bg-gray-800 cursor-pointer border-2 border-transparent hover:border-black"></div>
+          <div class="w-8 h-8 rounded-full bg-gray-400 cursor-pointer border-2 border-transparent hover:border-black"></div>
+          <div class="w-8 h-8 rounded-full bg-white border-2 border-gray-300 cursor-pointer hover:border-black"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="w-full h-px bg-gray-200" data-node-id="29:1370"></div>
+    <!-- Size Section -->
+    <div class="flex flex-col gap-5 w-full" data-node-id="29:1380">
+      <div class="flex items-center justify-between w-full" data-node-id="29:1371">
+        <div class="flex flex-col justify-center font-bold text-xl text-black" data-node-id="29:1372">
+          <p>Size</p>
+        </div>
+        <div class="flex items-center justify-center rotate-180" data-node-id="29:1373">
+          <div class="flex-shrink-0 w-4 h-4" data-name="Frame" data-node-id="29:1373">
+            <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Size Buttons -->
+      <div class="flex flex-wrap gap-2 w-full" data-node-id="29:1379">
+        <button class="bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600 hover:bg-black hover:text-white transition-colors">XX-Small</button>
+        <button class="bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600 hover:bg-black hover:text-white transition-colors">X-Small</button>
+        <button class="bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600 hover:bg-black hover:text-white transition-colors">Small</button>
+        <button class="bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600 hover:bg-black hover:text-white transition-colors">Medium</button>
+        <button class="bg-black px-5 py-2 rounded-full text-sm text-white font-medium">Large</button>
+        <button class="bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600 hover:bg-black hover:text-white transition-colors">X-Large</button>
+        <button class="bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600 hover:bg-black hover:text-white transition-colors">XX-Large</button>
+        <button class="bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600 hover:bg-black hover:text-white transition-colors">3X-Large</button>
+        <button class="bg-gray-100 px-5 py-2 rounded-full text-sm text-gray-600 hover:bg-black hover:text-white transition-colors">4X-Large</button>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="w-full h-px bg-gray-200" data-node-id="29:1401"></div>
+    <!-- Dress Style Section -->
+    <div class="flex flex-col gap-5 w-full" data-node-id="29:1423">
+      <div class="flex items-center justify-between w-full" data-node-id="29:1397">
+        <div class="flex flex-col justify-center font-bold text-xl text-black" data-node-id="29:1398">
+          <p>Dress Style</p>
+        </div>
+        <div class="flex items-center justify-center rotate-180" data-node-id="29:1399">
+          <div class="flex-shrink-0 w-4 h-4" data-name="Frame" data-node-id="29:1399">
+            <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Dress Style Items -->
+      <div class="flex flex-col gap-5 w-full" data-node-id="29:1402">
+        <div class="flex items-center justify-between w-full cursor-pointer hover:text-black transition-colors" data-node-id="29:1403">
+          <p class="text-base text-gray-600">Casual</p>
+          <div class="flex-shrink-0 w-4 h-4 -rotate-90" data-node-id="29:1405">
+            <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-center justify-between w-full cursor-pointer hover:text-black transition-colors" data-node-id="29:1407">
+          <p class="text-base text-gray-600">Formal</p>
+          <div class="flex-shrink-0 w-4 h-4 -rotate-90" data-node-id="29:1409">
+            <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-center justify-between w-full cursor-pointer hover:text-black transition-colors" data-node-id="29:1411">
+          <p class="text-base text-gray-600">Party</p>
+          <div class="flex-shrink-0 w-4 h-4 -rotate-90" data-node-id="29:1413">
+            <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-center justify-between w-full cursor-pointer hover:text-black transition-colors" data-node-id="29:1415">
+          <p class="text-base text-gray-600">Gym</p>
+          <div class="flex-shrink-0 w-4 h-4 -rotate-90" data-node-id="29:1417">
+            <svg class="w-full h-full" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6L3 16M3 6l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Apply Filter Button -->
+    <button class="w-full bg-black text-white font-medium py-3 px-14 rounded-full text-sm hover:bg-gray-900 transition-colors" data-node-id="29:7642"> Apply Filter </button>
+  </div>
+</body>
+
+</html>
