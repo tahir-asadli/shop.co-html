@@ -25,27 +25,35 @@
     background-color: var(--color-brand-primary);
   }
 }
+@layer utilities {
+  .container {
+    /* Apply default horizontal margin for centering */
+    margin-inline: auto;
+    /* Apply default horizontal padding */
+    padding-inline: 1rem;
 
-@utility container {
-  /* Apply default horizontal margin for centering */
-  margin-inline: auto;
-  /* Apply default horizontal padding */
-  padding-inline: 1rem;
-
-  /* Customize max-width at specific breakpoints using @variant */
-  @variant sm {
-    max-width: 540px;
+    /* Customize max-width at specific breakpoints using @variant */
+    @variant sm {
+      max-width: 540px;
+    }
+    @variant md {
+      max-width: 720px;
+    }
+    @variant lg {
+      max-width: 960px;
+    }
+    @variant xl {
+      max-width: 1140px;
+    }
+    @variant 2xl {
+      max-width: 1240px;
+    }
   }
-  @variant md {
-    max-width: 720px;
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-  @variant lg {
-    max-width: 960px;
-  }
-  @variant xl {
-    max-width: 1140px;
-  }
-  @variant 2xl {
-    max-width: 1240px;
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
