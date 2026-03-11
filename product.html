@@ -62,6 +62,128 @@
     </div>
   </nav>
   <!-- Product Info -->
+  <section class="w-full">
+    <div class="container px-4 py-8">
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 mb-8 text-gray-600">
+        <a href="/" class="hover:text-black">Home</a>
+        <span>></span>
+        <a href="/shop" class="hover:text-black">Shop</a>
+        <span>></span>
+        <a href="/shop/men" class="hover:text-black">Men</a>
+        <span>></span>
+        <span class="text-black font-medium">T-shirts</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <!-- Product Images -->
+        <div class="flex flex-row gap-4">
+          <!-- Thumbnail Images -->
+          <div class="flex flex-col gap-4 max-h-132 overflow-y-auto">
+            <button class="border-2 border-black rounded-lg overflow-hidden aspect-square w-30 h-30 shrink-0 grow-0 cursor-pointer hover:opacity-80 transition" onclick="changeImage('./images/image-1.png')">
+              <img src="./images/image-1.png" alt="View 1" class="w-full h-full object-cover">
+            </button>
+            <button class="border-2 border-gray-200 rounded-lg overflow-hidden aspect-square w-30 h-30 shrink-0 grow-0 cursor-pointer hover:opacity-80 transition" onclick="changeImage('./images/image-2.png')">
+              <img src="./images/image-2.png" alt="View 2" class="w-full h-full object-cover">
+            </button>
+            <button class="border-2 border-gray-200 rounded-lg overflow-hidden aspect-square w-30 h-30 shrink-0 grow-0 cursor-pointer hover:opacity-80 transition" onclick="changeImage('./images/image-3.png')">
+              <img src="./images/image-3.png" alt="View 3" class="w-full h-full object-cover">
+            </button>
+            <button class="border-2 border-gray-200 rounded-lg overflow-hidden aspect-square w-30 h-30 shrink-0 grow-0 cursor-pointer hover:opacity-80 transition" onclick="changeImage('./images/image-3.png')">
+              <img src="./images/image-3.png" alt="View 3" class="w-full h-full object-cover">
+            </button>
+            <button class="border-2 border-gray-200 rounded-lg overflow-hidden aspect-square w-30 h-30 shrink-0 grow-0 cursor-pointer hover:opacity-80 transition" onclick="changeImage('./images/image-3.png')">
+              <img src="./images/image-3.png" alt="View 3" class="w-full h-full object-cover">
+            </button>
+            <button class="border-2 border-gray-200 rounded-lg overflow-hidden aspect-square w-30 h-30 shrink-0 grow-0 cursor-pointer hover:opacity-80 transition" onclick="changeImage('./images/image-3.png')">
+              <img src="./images/image-3.png" alt="View 3" class="w-full h-full object-cover">
+            </button>
+            <button class="border-2 border-gray-200 rounded-lg overflow-hidden aspect-square w-30 h-30 shrink-0 grow-0 cursor-pointer hover:opacity-80 transition" onclick="changeImage('./images/image-3.png')">
+              <img src="./images/image-3.png" alt="View 3" class="w-full h-full object-cover">
+            </button>
+            <button class="border-2 border-gray-200 rounded-lg overflow-hidden aspect-square w-30 h-30 shrink-0 grow-0 cursor-pointer hover:opacity-80 transition" onclick="changeImage('./images/image-3.png')">
+              <img src="./images/image-3.png" alt="View 3" class="w-full h-full object-cover">
+            </button>
+            <button class="border-2 border-gray-200 rounded-lg overflow-hidden aspect-square w-30 h-30 shrink-0 grow-0 cursor-pointer hover:opacity-80 transition" onclick="changeImage('./images/image-3.png')">
+              <img src="./images/image-3.png" alt="View 3" class="w-full h-full object-cover">
+            </button>
+          </div>
+          <!-- Main Image -->
+          <div class="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center flex-1 max-h-132">
+            <img id="mainImage" src="./images/image-1.png" alt="ONE LIFE GRAPHIC T-SHIRT" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <!-- Product Details -->
+        <div class="flex flex-col gap-6">
+          <!-- Title and Rating -->
+          <div>
+            <h1 class="text-4xl font-bold mb-4">ONE LIFE GRAPHIC T-SHIRT</h1>
+            <!-- Rating -->
+            <div class="flex items-center gap-3 mb-4">
+              <div class="flex items-center gap-1">
+                <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 20 20">
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </svg>
+                <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 20 20">
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </svg>
+                <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 20 20">
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </svg>
+                <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 20 20">
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </svg>
+                <svg class="w-5 h-5 fill-yellow-300" viewBox="0 0 20 20">
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </svg>
+              </div>
+              <span class="text-black font-semibold">4.5/5</span>
+            </div>
+          </div>
+          <!-- Price -->
+          <div class="flex items-center gap-4">
+            <span class="text-3xl font-bold text-black">$260</span>
+            <span class="text-2xl text-gray-400 line-through">$300</span>
+            <span class="bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-semibold">-40%</span>
+          </div>
+          <!-- Description -->
+          <p class="text-gray-600 leading-relaxed"> This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style. </p>
+          <div class="border-t border-gray-200"></div>
+          <!-- Color Selection -->
+          <div>
+            <h3 class="text-black font-semibold mb-3">Select Colors</h3>
+            <div class="flex items-center gap-4">
+              <button class="w-10 h-10 rounded-full bg-yellow-700 border-2 border-black flex items-center justify-center cursor-pointer hover:opacity-80 transition" style="background-color: #5a4a3a;" title="Brown">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <button class="w-10 h-10 rounded-full border-2 border-gray-300 cursor-pointer hover:opacity-80 transition" style="background-color: #2d5a52;" title="Teal"></button>
+              <button class="w-10 h-10 rounded-full border-2 border-gray-300 cursor-pointer hover:opacity-80 transition" style="background-color: #1a2e5a;" title="Navy"></button>
+            </div>
+          </div>
+          <!-- Size Selection -->
+          <div>
+            <h3 class="text-black font-semibold mb-3">Choose Size</h3>
+            <div class="flex items-center gap-3">
+              <button class="px-6 py-3 border border-gray-300 rounded-full text-gray-600 font-medium hover:border-black transition">Small</button>
+              <button class="px-6 py-3 border border-gray-300 rounded-full text-gray-600 font-medium hover:border-black transition">Medium</button>
+              <button class="px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition">Large</button>
+              <button class="px-6 py-3 border border-gray-300 rounded-full text-gray-600 font-medium hover:border-black transition">X-Large</button>
+            </div>
+          </div>
+          <!-- Quantity and Add to Cart -->
+          <div class="flex items-center gap-4 pt-4">
+            <div class="flex items-center border border-gray-300 rounded-full px-4 py-3 gap-4">
+              <button class="text-gray-600 hover:text-black transition text-xl">−</button>
+              <span class="text-black font-semibold min-w-8 text-center">1</span>
+              <button class="text-gray-600 hover:text-black transition text-xl">+</button>
+            </div>
+            <button class="flex-1 bg-black text-white py-3 rounded-full font-semibold hover:bg-gray-800 transition text-lg"> Add to Cart </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Newsletter -->
   <section class="w-full relative mt-20">
     <div class="container px-4 md:px-16 py-6 md:py-9 rounded-4xl bg-black">
@@ -168,6 +290,18 @@
       </div>
     </div>
   </footer>
+  <script>
+    function changeImage(imageSrc) {
+      document.getElementById('mainImage').src = imageSrc;
+      // Update thumbnail borders
+      document.querySelectorAll('[onclick^="changeImage"]').forEach(button => {
+        button.classList.remove('border-black');
+        button.classList.add('border-gray-200');
+      });
+      event.target.closest('button').classList.remove('border-gray-200');
+      event.target.closest('button').classList.add('border-black');
+    }
+  </script>
 </body>
 
 </html>
