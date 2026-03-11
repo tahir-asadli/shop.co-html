@@ -539,6 +539,9 @@
   .grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
+  .grid-cols-\[300px_auto\] {
+    grid-template-columns: 300px auto;
+  }
   .flex-col {
     flex-direction: column;
   }
