@@ -34,6 +34,8 @@
     --container-xs: 20rem;
     --container-md: 28rem;
     --container-xl: 36rem;
+    --container-3xl: 48rem;
+    --container-4xl: 56rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 16px;
@@ -268,8 +270,14 @@
       max-width: 96rem;
     }
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .-mt-25 {
     margin-top: calc(var(--spacing) * -25);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
   }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
@@ -303,6 +311,9 @@
   }
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
+  }
+  .contents {
+    display: contents;
   }
   .flex {
     display: flex;
@@ -391,6 +402,18 @@
   .max-h-132 {
     max-height: calc(var(--spacing) * 132);
   }
+  .max-h-136 {
+    max-height: calc(var(--spacing) * 136);
+  }
+  .max-h-138 {
+    max-height: calc(var(--spacing) * 138);
+  }
+  .max-h-140 {
+    max-height: calc(var(--spacing) * 140);
+  }
+  .max-h-full {
+    max-height: 100%;
+  }
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
@@ -423,6 +446,12 @@
   }
   .w-full {
     width: 100%;
+  }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+  .max-w-4xl {
+    max-width: var(--container-4xl);
   }
   .max-w-87 {
     max-width: calc(var(--spacing) * 87);
@@ -489,6 +518,12 @@
   .resize {
     resize: both;
   }
+  .list-inside {
+    list-style-position: inside;
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
   .appearance-none {
     appearance: none;
   }
@@ -551,6 +586,13 @@
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
+  }
+  .space-y-2 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .space-y-3 {
     :where(& > :not(:last-child)) {
@@ -638,6 +680,12 @@
   }
   .border-transparent {
     border-color: transparent;
+  }
+  .border-b-black {
+    border-bottom-color: var(--color-black);
+  }
+  .border-b-transparent {
+    border-bottom-color: transparent;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -1094,6 +1142,11 @@
   .md\:py-9 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 9);
+    }
+  }
+  .md\:py-10 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 10);
     }
   }
   .md\:py-20 {

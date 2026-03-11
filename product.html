@@ -90,7 +90,7 @@
         <!-- Product Images -->
         <div class="flex flex-row gap-4">
           <!-- Thumbnail Images -->
-          <div class="flex flex-col gap-4 max-h-132 overflow-y-auto scrollbar-hide">
+          <div class="flex flex-col gap-4 max-h-140 overflow-y-auto scrollbar-hide">
             <button class="border-2 border-black rounded-lg overflow-hidden aspect-square w-30 h-30 shrink-0 grow-0 cursor-pointer hover:opacity-80 transition" onclick="changeImage('./images/image-1.png')">
               <img src="./images/image-1.png" alt="View 1" class="w-full h-full object-cover">
             </button>
@@ -120,7 +120,7 @@
             </button>
           </div>
           <!-- Main Image -->
-          <div class="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center flex-1 max-h-132">
+          <div class="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center flex-1 max-h-140">
             <img id="mainImage" src="./images/image-1.png" alt="ONE LIFE GRAPHIC T-SHIRT" class="w-full h-full object-cover">
           </div>
         </div>
@@ -196,171 +196,345 @@
       </div>
     </div>
   </section>
-
   <!-- Reviews Section -->
   <section class="w-full">
     <div class="container px-4 py-12">
       <!-- Tabs -->
       <div class="flex items-center justify-between border-b border-gray-300 mb-8">
-        <div class="flex gap-8">
-          <button class="pb-4 text-gray-600 hover:text-black transition border-b-2 border-transparent">Product Details</button>
-          <button class="pb-4 text-black font-semibold border-b-2 border-black">Rating & Reviews</button>
-          <button class="pb-4 text-gray-600 hover:text-black transition border-b-2 border-transparent">FAQs</button>
+        <div class="flex gap-8 justify-center w-full">
+          <button class="tab-button pb-4 text-gray-600 hover:text-black transition border-b-2 border-transparent" data-tab="details">Product Details</button>
+          <button class="tab-button pb-4 text-black font-semibold border-b-2 border-black" data-tab="reviews">Rating & Reviews</button>
+          <button class="tab-button pb-4 text-gray-600 hover:text-black transition border-b-2 border-transparent" data-tab="faqs">FAQs</button>
         </div>
       </div>
-
-      <!-- Reviews Header -->
-      <div class="flex items-center justify-between mb-8">
-        <h2 class="text-2xl font-bold">All Reviews <span class="text-gray-600 text-lg font-normal">(451)</span></h2>
-        <div class="flex items-center gap-4">
-          <!-- Filter Button -->
-          <button class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:border-black transition">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
-            </svg>
-            <span>Latest</span>
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
-            </svg>
-          </button>
-          <!-- Write Review Button -->
-          <button class="px-6 py-2 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition">Write a Review</button>
+      <!-- Tab Contents -->
+      <!-- Product Details Tab -->
+      <div id="details-content" class="tab-content hidden">
+        <div class="max-w-4xl">
+          <h3 class="text-2xl font-bold mb-6">Product Details</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-semibold text-lg mb-4">Material & Care</h4>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex gap-3">
+                  <span class="text-black font-semibold">Fabric:</span>
+                  <span>100% Organic Cotton - Premium quality, breathable and soft</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-black font-semibold">Weight:</span>
+                  <span>180 GSM - Perfect for comfort in any season</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-black font-semibold">Care:</span>
+                  <span>Machine wash cold. Tumble dry low. Do not bleach</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg mb-4">Fit & Sizing</h4>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex gap-3">
+                  <span class="text-black font-semibold">Fit:</span>
+                  <span>Classic, comfortable relaxed fit</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-black font-semibold">Length:</span>
+                  <span>Regular length, hits at hip</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-black font-semibold">Design:</span>
+                  <span>Crew neck with reinforced seams</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 pt-8 border-t border-gray-300">
+            <h4 class="font-semibold text-lg mb-4">Design Features</h4>
+            <p class="text-gray-600 leading-relaxed mb-4"> This graphic t-shirt features a unique, one-of-a-kind design that combines modern aesthetics with classic comfort. The minimalist yet striking pattern showcases attention to detail and quality craftsmanship. Perfect for any occasion, from casual everyday wear to creative expression. </p>
+            <ul class="space-y-2 text-gray-600 list-disc list-inside">
+              <li>High-quality screen printed design</li>
+              <li>Durable stitching that withstands multiple washes</li>
+              <li>Eco-friendly, sustainably sourced material</li>
+              <li>Available in multiple sizes and colors</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <!-- Reviews Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <!-- Review 1 -->
-        <div class="border border-gray-300 rounded-lg p-6">
-          <div class="flex gap-1 mb-3">
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-300" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
+      <!-- Reviews Tab -->
+      <div id="reviews-content" class="tab-content">
+        <!-- Reviews Header -->
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-bold">All Reviews <span class="text-gray-600 text-lg font-normal">(451)</span></h2>
+          <div class="flex items-center gap-4">
+            <!-- Filter Button -->
+            <button class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:border-black transition">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+              </svg>
+              <span>Latest</span>
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <!-- Write Review Button -->
+            <button class="px-6 py-2 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition">Write a Review</button>
           </div>
-          <div class="flex items-center gap-2 mb-3">
-            <h4 class="font-semibold text-black">Samantha D.</h4>
-            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-          <p class="text-gray-600 mb-3">
-            "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
-          </p>
-          <p class="text-sm text-gray-500">Posted on August 14, 2023</p>
         </div>
-
-        <!-- Review 2 -->
-        <div class="border border-gray-300 rounded-lg p-6">
-          <div class="flex gap-1 mb-3">
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
+        <!-- Reviews Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <!-- Review 1 -->
+          <div class="border border-gray-300 rounded-lg p-6">
+            <div class="flex gap-1 mb-3">
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-300" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+            </div>
+            <div class="flex items-center gap-2 mb-3">
+              <h4 class="font-semibold text-black">Samantha D.</h4>
+              <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="text-gray-600 mb-3"> "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt." </p>
+            <p class="text-sm text-gray-500">Posted on August 14, 2023</p>
           </div>
-          <div class="flex items-center gap-2 mb-3">
-            <h4 class="font-semibold text-black">Alex M.</h4>
-            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
+          <!-- Review 2 -->
+          <div class="border border-gray-300 rounded-lg p-6">
+            <div class="flex gap-1 mb-3">
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+            </div>
+            <div class="flex items-center gap-2 mb-3">
+              <h4 class="font-semibold text-black">Alex M.</h4>
+              <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="text-gray-600 mb-3"> "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me." </p>
+            <p class="text-sm text-gray-500">Posted on August 15, 2023</p>
           </div>
-          <p class="text-gray-600 mb-3">
-            "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."
-          </p>
-          <p class="text-sm text-gray-500">Posted on August 15, 2023</p>
+          <!-- Review 3 -->
+          <div class="border border-gray-300 rounded-lg p-6">
+            <div class="flex gap-1 mb-3">
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-300" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+            </div>
+            <div class="flex items-center gap-2 mb-3">
+              <h4 class="font-semibold text-black">Ethan R.</h4>
+              <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="text-gray-600 mb-3"> "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt." </p>
+            <p class="text-sm text-gray-500">Posted on August 16, 2023</p>
+          </div>
+          <!-- Review 4 -->
+          <div class="border border-gray-300 rounded-lg p-6">
+            <div class="flex gap-1 mb-3">
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z" />
+              </svg>
+            </div>
+            <div class="flex items-center gap-2 mb-3">
+              <h4 class="font-semibold text-black">Olivia P.</h4>
+              <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="text-gray-600 mb-3"> "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents these principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out." </p>
+            <p class="text-sm text-gray-500">Posted on August 17, 2023</p>
+          </div>
         </div>
-
-        <!-- Review 3 -->
-        <div class="border border-gray-300 rounded-lg p-6">
-          <div class="flex gap-1 mb-3">
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-300" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-          </div>
-          <div class="flex items-center gap-2 mb-3">
-            <h4 class="font-semibold text-black">Ethan R.</h4>
-            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-          <p class="text-gray-600 mb-3">
-            "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."
-          </p>
-          <p class="text-sm text-gray-500">Posted on August 16, 2023</p>
-        </div>
-
-        <!-- Review 4 -->
-        <div class="border border-gray-300 rounded-lg p-6">
-          <div class="flex gap-1 mb-3">
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-            <svg class="w-5 h-5 text-yellow-400" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8.79246 0L11.4117 5.63991L17.5849 6.38809L13.0304 10.6219L14.2265 16.7243L8.79246 13.701L3.35842 16.7243L4.5545 10.6219L2.86102e-06 6.38809L6.17325 5.63991L8.79246 0Z"/>
-            </svg>
-          </div>
-          <div class="flex items-center gap-2 mb-3">
-            <h4 class="font-semibold text-black">Olivia P.</h4>
-            <svg class="w-5 h-5 text-green-500" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-          <p class="text-gray-600 mb-3">
-            "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents these principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."
-          </p>
-          <p class="text-sm text-gray-500">Posted on August 17, 2023</p>
+        <!-- Load More Button -->
+        <div class="flex justify-center">
+          <button class="px-8 py-3 border border-gray-300 rounded-full font-semibold hover:border-black hover:bg-gray-50 transition"> Load More Reviews </button>
         </div>
       </div>
-
-      <!-- Load More Button -->
-      <div class="flex justify-center">
-        <button class="px-8 py-3 border border-gray-300 rounded-full font-semibold hover:border-black hover:bg-gray-50 transition">
-          Load More Reviews
-        </button>
+      <!-- FAQs Tab -->
+      <div id="faqs-content" class="tab-content hidden">
+        <div class="max-w-3xl mx-auto">
+          <h3 class="text-2xl font-bold mb-6 text-center">Frequently Asked Questions</h3>
+          <div class="space-y-4">
+            <div class="border border-gray-300 rounded-lg p-6">
+              <h4 class="font-semibold text-black mb-2">What sizes are available?</h4>
+              <p class="text-gray-600">We offer sizes from XS to XXL. Each size is available in the color variations shown on the product page.</p>
+            </div>
+            <div class="border border-gray-300 rounded-lg p-6">
+              <h4 class="font-semibold text-black mb-2">How long does shipping take?</h4>
+              <p class="text-gray-600">Standard shipping typically takes 5-7 business days. Express shipping is available for 2-3 business day delivery.</p>
+            </div>
+            <div class="border border-gray-300 rounded-lg p-6">
+              <h4 class="font-semibold text-black mb-2">Can I return the item?</h4>
+              <p class="text-gray-600">Yes! We offer a 30-day money-back guarantee. If you're not satisfied, simply return it for a full refund.</p>
+            </div>
+            <div class="border border-gray-300 rounded-lg p-6">
+              <h4 class="font-semibold text-black mb-2">Is the design printed or embroidered?</h4>
+              <p class="text-gray-600">Our design is screen printed using high-quality, durable ink that lasts through many washes.</p>
+            </div>
+            <div class="border border-gray-300 rounded-lg p-6">
+              <h4 class="font-semibold text-black mb-2">Do you offer bulk orders?</h4>
+              <p class="text-gray-600">Yes! For bulk orders of 10+ items, please contact our customer service for special pricing.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
+  <!-- You might also like -->
+  <section class="w-full">
+    <div class="container px-4 py-16 md:py-10">
+      <!-- Section Heading -->
+      <div class="flex justify-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-black font-anton">YOU MIGHT ALSO LIKE</h2>
+      </div>
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
+        <!-- Product 1 -->
+        <div class="flex flex-col gap-4">
+          <div class="bg-gray-200 rounded-lg overflow-hidden h-64 flex items-center justify-center">
+            <img src="./images/tshirt.png" alt="T-shirt with Tape Details" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-black mb-2">T-shirt with Tape Details</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex gap-1">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4 opacity-40">
+              </div>
+              <span class="text-sm text-gray-600">4.5/5</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xl font-bold text-black">$120</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="flex flex-col gap-4">
+          <div class="bg-gray-200 rounded-lg overflow-hidden h-64 flex items-center justify-center">
+            <img src="./images/jeans.png" alt="Skinny Fit Jeans" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-black mb-2">Skinny Fit Jeans</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex gap-1">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4 opacity-40">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4 opacity-40">
+              </div>
+              <span class="text-sm text-gray-600">3.5/5</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xl font-bold text-black">$240</span>
+              <span class="text-lg text-gray-400 line-through">$260</span>
+              <span class="text-sm font-semibold text-red-500">-20%</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="flex flex-col gap-4">
+          <div class="bg-gray-200 rounded-lg overflow-hidden h-64 flex items-center justify-center">
+            <img src="./images/shirt.png" alt="Checkered Shirt" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-black mb-2">Checkered Shirt</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex gap-1">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4 opacity-40">
+              </div>
+              <span class="text-sm text-gray-600">4.5/5</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xl font-bold text-black">$180</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="flex flex-col gap-4">
+          <div class="bg-gray-200 rounded-lg overflow-hidden h-64 flex items-center justify-center">
+            <img src="./images/sleeve-tshirt.png" alt="Sleeve Striped T-shirt" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="text-base font-semibold text-black mb-2">Sleeve Striped T-shirt</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex gap-1">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4">
+                <img src="./images/star.svg" alt="star" class="w-4 h-4 opacity-40">
+              </div>
+              <span class="text-sm text-gray-600">4.5/5</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xl font-bold text-black">$130</span>
+              <span class="text-lg text-gray-400 line-through">$160</span>
+              <span class="text-sm font-semibold text-red-500">-30%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- View All Button -->
+      <div class="flex justify-center">
+        <button class="bg-white border border-gray-300 rounded-full px-16 py-4 font-medium text-black hover:bg-gray-50 transition"> View All </button>
+      </div>
+    </div>
+  </section>
   <!-- Newsletter -->
   <section class="w-full relative mt-20">
     <div class="container px-4 md:px-16 py-6 md:py-9 rounded-4xl bg-black">
@@ -478,6 +652,30 @@
       event.target.closest('button').classList.remove('border-gray-200');
       event.target.closest('button').classList.add('border-black');
     }
+
+    // Tab functionality
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', function () {
+        const tabName = this.getAttribute('data-tab');
+
+        // Hide all tab contents
+        document.querySelectorAll('.tab-content').forEach(content => {
+          content.classList.add('hidden');
+        });
+
+        // Show selected tab content
+        document.getElementById(tabName + '-content').classList.remove('hidden');
+
+        // Update tab button styles
+        document.querySelectorAll('.tab-button').forEach(btn => {
+          btn.classList.remove('text-black', 'font-semibold', 'border-b-black');
+          btn.classList.add('text-gray-600', 'border-b-transparent');
+        });
+
+        this.classList.remove('text-gray-600', 'border-b-transparent');
+        this.classList.add('text-black', 'font-semibold', 'border-b-black');
+      });
+    });
   </script>
 </body>
 
